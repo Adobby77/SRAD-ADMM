@@ -55,7 +55,7 @@ The algorithm alternates between:
 | **Dual Update** | $y_i^{k+1} = y_i^k + \rho(x_i^{k+1} - z^k)$ | **`Worker.local_step`**: `self.y = self.y + self.rho * (self.x - self.last_z)` |
 | **Message** | $s_i = x_i + y_i / \rho$ | **`Worker.local_step`**: `s = self.x + (self.y / self.rho)` <br> Worker sends this composite value to save bandwidth. |
 | **Communication** | Send $s_i$ to Central | **`SimulationEnv.run`**: `self.push_event(..., 'WORKER_DONE', ...)` <br> Simulates packet arrival delay. |
-| **Z-Update** | $z^{k+1} = \frac{1}{|S|} \sum s_j$ | **`SimulationEnv.update_global_model`**: `self.global_z = np.mean(valid_s, axis=0)` |
+| **Z-Update** | $z^{k+1} = \frac{1}{\|S\|} \sum s_j$ | **`SimulationEnv.update_global_model`**: `self.global_z = np.mean(valid_s, axis=0)` |
 
 ### Straggler Resilience (The Key Feature)
 Standard ADMM waits for **ALL** workers to finish step 1 before doing step 2. This is slow because of "Stragglers".
