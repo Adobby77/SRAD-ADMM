@@ -1,0 +1,10 @@
+# AI 에이전트 작업 부산물 (docs 폴더 정리)
+*.resolved*
+*.metadata.json
+
+# 파이썬 실행 시 생성되는 캐시
+__pycache__/
+*.py[cod]
+
+# 맥(Mac) 시스템 파일 (노트북에서 생성됨)
+.DS_Store
