@@ -241,7 +241,7 @@ def main():
     plt.grid(True, which="both", ls="-")
     plt.legend()
     
-    output_path = 'admm_comparison_plot.png'
+    output_path = '../results/SR-ADMM.png'
     plt.savefig(output_path)
     print(f"Comparison plot saved to {output_path}")
 
