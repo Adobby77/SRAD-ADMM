@@ -2,6 +2,8 @@
 
 This repository contains simulations for various **Distributed ADMM (Alternating Direction Method of Multipliers)** algorithms, focusing on their resilience to **stragglers** (slow computing nodes) in a distributed learning environment.
 
+Reference: Straggler-Resilient Asynchronous ADMM for Distributed Consensus Optimization, J He, M Xiao, M Skoglund, HV Poor - IEEE Transactions on Signal Processing, 2025
+
 ## 🧪 Implemented Algorithms
 
 1.  **CC-ADMM (Coded Computation ADMM) / Standard ADMM**
