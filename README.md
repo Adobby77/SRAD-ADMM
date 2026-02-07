@@ -66,7 +66,7 @@ This metric shows how the global objective value decreases with the number of co
 
 ### 2. Convergence vs. Iteration ($\epsilon^k$)
 
-This plot shows the relative error $\left\lVert\mathbf{z}^k-\mathbf{z}^*\right\rVert / \left\lVert\mathbf{z}^*\right\rVert$ against iterations.
+This plot shows the relative error $\|\mathbf{z}^k - \mathbf{z}^*\| / \|\mathbf{z}^*\|$ against iterations.
 
 ![Convergence Rate](src/results/fig_convergence.png)
 
